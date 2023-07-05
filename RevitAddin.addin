@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+
+<RevitAddIns>
+	<!--  APPLICATION  -->
+	<AddIn Type="Application">
+		<Name>RevitAddin</Name>
+		<Assembly>RevitAddin\RevitAddin.dll</Assembly>
+		<AddInId>604B1052-F742-4951-8576-C261D1993107</AddInId>
+		<FullClassName>RevitAddin.App</FullClassName>
+		<VendorId>FLI</VendorId>
+		<VendorDescription>Frederik Lind</VendorDescription>
+		<VisibilityMode>NotVisibleInFamily</VisibilityMode>
+	</AddIn>
+</RevitAddIns>
