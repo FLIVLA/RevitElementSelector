@@ -1,4 +1,5 @@
 ﻿using Autodesk.Revit.DB;
+using Autodesk.Revit.DB.Events;
 using Autodesk.Revit.UI;
 using RevitAddin.DockablePane;
 using System;
@@ -14,6 +15,7 @@ namespace RevitAddin
     public class App : IExternalApplication
     {
         public static UIControlledApplication Application { get; private set; }
+        public static UIDocument uidoc { get; set; }
         public static Document Document { get; set; }
 
         public Result OnShutdown(UIControlledApplication application)
@@ -27,13 +29,21 @@ namespace RevitAddin
             {
                 Application = application;
                 DockHelper.Create_Dockable_Pane(Application);
-                AddComponents("Basic-Revit-Addin", "Addin-Ribbon");
+                AddComponents("Awesome-O 4000", "Element Selector Stuff");
+
+                application.ControlledApplication.DocumentOpened += OnDocumentOpened;
+
                 return Result.Succeeded;
             }
             catch (Exception ex)
             {
                 return Result.Failed;
             }
+        }
+
+        public void OnDocumentOpened(object sender, DocumentOpenedEventArgs e)
+        {
+            Document = e.Document;
         }
 
         private void AddComponents(string tabName, string ribbonPanelName)

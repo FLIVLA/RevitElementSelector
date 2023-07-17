@@ -8,7 +8,7 @@
 		<AddInId>604B1052-F742-4951-8576-C261D1993107</AddInId>
 		<FullClassName>RevitAddin.App</FullClassName>
 		<VendorId>FLI</VendorId>
-		<VendorDescription>Frederik Lind</VendorDescription>
+		<VendorDescription>FrederikLINDLIND Lind</VendorDescription>
 		<VisibilityMode>NotVisibleInFamily</VisibilityMode>
 	</AddIn>
 </RevitAddIns>

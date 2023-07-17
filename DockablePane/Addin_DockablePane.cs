@@ -33,7 +33,7 @@ namespace RevitAddin.DockablePane
         {
             data.FrameworkElementCreator = this as IFrameworkElementCreator;
             data.InitialState = new DockablePaneState();
-            data.InitialState.MinimumWidth = 300;
+            data.InitialState.MinimumWidth = 400;
             data.VisibleByDefault = false;
             data.EditorInteraction = new EditorInteraction(EditorInteractionType.KeepAlive);
             data.InitialState.DockPosition = DockPosition.Right;

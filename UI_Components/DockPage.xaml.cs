@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RevitAddin.DockablePane;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,20 @@ namespace RevitAddin.UI_Components
         public DockPage()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+            if (ID_BOX.Text != "")
+            {
+                var ids = ID_BOX.Text.Split(',').Select(x => int.Parse(x.Trim())).ToList();
+                DockHelper.Isolate(ids);
+            }
+            else
+            {
+                return;
+            }
         }
     }
 }
